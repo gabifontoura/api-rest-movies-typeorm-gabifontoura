@@ -24,9 +24,8 @@ export const handleErrors = (error: Error, req: Request, res: Response, _: NextF
         const { fieldErrors, formErrors } = error.flatten();
 
           const fieldErrorMessage = Object.entries(fieldErrors)
-            .map(([field, message]) => `${field}: ${message}`)
-            .join('; ');
-          const message = formErrors.concat(fieldErrorMessage).join('; ');
+            .map(([field, message]) => `${field}: ${message}`);
+          const message = formErrors.concat(fieldErrorMessage);
       
           return res.status(400).json({
             message: message
