@@ -10,3 +10,5 @@ export const movieSchema = z.object({
 export const returnMovieSchema = movieSchema.extend({
     id: z.number().nonnegative().int(),
 })
+
+export const returnAllMoviesSchema = returnMovieSchema.array()

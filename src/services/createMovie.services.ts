@@ -8,7 +8,7 @@ export const createMovieService = async ( movieData : iMovie): Promise<iMovieRes
 
     const movieRepository: Repository<Movie> = AppDataSource.getRepository(Movie)
 
-    const movie = movieRepository.create(movieData)
+    const movie: Movie = movieRepository.create(movieData)
 
     await movieRepository.save(movie)
 
