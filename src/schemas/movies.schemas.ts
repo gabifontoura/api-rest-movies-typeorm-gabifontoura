@@ -12,3 +12,5 @@ export const returnMovieSchema = movieSchema.extend({
 })
 
 export const returnAllMoviesSchema = returnMovieSchema.array()
+
+export const updateMovieSchema = movieSchema.partial()
