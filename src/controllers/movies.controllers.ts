@@ -19,7 +19,7 @@ export const createMovieController = async (
 
 export const listAllMoviesController = async (req: Request, res: Response) => {
 
-    const movies = await listAllMoviesService()
+    const movies = await listAllMoviesService(req)
 
     return res.json(movies)
 }
