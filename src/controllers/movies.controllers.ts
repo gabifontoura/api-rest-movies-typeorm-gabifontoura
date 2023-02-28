@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { iAllMoviesResult, iMovie, iUpdateMovie } from "../__tests__/interfaces/movies.interfaces";
+import { iAllMoviesResult, iMovie, iUpdateMovie } from "../interfaces/movies.interfaces";
 import { createMovieService } from "../services/createMovie.services";
 import { deleteMovieService } from "../services/deleteMovie.services";
 import { listAllMoviesService } from "../services/listAllMovies.services";
@@ -19,9 +19,9 @@ export const createMovieController = async (
 
 export const listAllMoviesController = async (req: Request, res: Response) => {
 
-    const { perPage, page } = req.query;
+    const { perPage, page, order, sort } = req.query;
 
-    const movies: iAllMoviesResult = await listAllMoviesService(perPage, page)
+    const movies: iAllMoviesResult = await listAllMoviesService(perPage, page, order, sort)
 
     return res.json(movies)
 }
