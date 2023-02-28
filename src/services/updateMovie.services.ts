@@ -1,8 +1,8 @@
 
 import { Repository } from "typeorm"
 import { AppDataSource } from "../data-source"
-import Movie  from "../entities"
-import { iMovieResult, iUpdateMovie } from "../interfaces/movies.interfaces"
+import { Movie }  from "../entities"
+import { iMovieResult, iUpdateMovie } from "../__tests__/interfaces/movies.interfaces"
 import { returnMovieSchema } from "../schemas/movies.schemas"
 
 

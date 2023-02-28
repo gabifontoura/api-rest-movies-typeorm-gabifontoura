@@ -1,3 +1,4 @@
+import "express-async-errors";
 import express, { Application } from 'express'
 import { handleErrors } from './errors'
 import movieRoutes from './routers/movies.routers'

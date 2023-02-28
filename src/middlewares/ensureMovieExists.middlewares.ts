@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction} from 'express'
 import { Repository } from 'typeorm'
 import { AppDataSource } from '../data-source'
-import Movie from '../entities'
+import { Movie } from '../entities'
 import { AppError } from '../errors'
 
 export const ensureMovieExists = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
