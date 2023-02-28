@@ -1,3 +1,3 @@
-import { Movie } from "./movie.entity";
+import Movie from "./movie.entity";
 
-export default Movie
+export { Movie }
