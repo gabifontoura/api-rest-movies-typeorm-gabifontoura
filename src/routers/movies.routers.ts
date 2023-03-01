@@ -10,7 +10,7 @@ const movieRoutes: Router = Router()
 movieRoutes.post("", ensureDataIsValid(movieSchema), ensureNameIsNew, createMovieController)
 movieRoutes.get("", listAllMoviesController)
 movieRoutes.delete("/:id", ensureMovieExists, deleteMovieController)
-movieRoutes.patch("/:id", ensureDataIsValid(updateMovieSchema), ensureMovieExists, updateMovieController)
+movieRoutes.patch("/:id", ensureDataIsValid(updateMovieSchema), ensureMovieExists, ensureNameIsNew, updateMovieController)
 
 
 export default movieRoutes

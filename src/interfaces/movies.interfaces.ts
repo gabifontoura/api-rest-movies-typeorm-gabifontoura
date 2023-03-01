@@ -14,4 +14,4 @@ export type iUpdateMovie = DeepPartial<iMovie>
 
 export type iMovieRepo = Repository<Movie>
 
-export type iMoviesPages = z.infer<typeof returnListAllMovies>
+export type iMoviesPage = z.infer<typeof returnListAllMovies>
