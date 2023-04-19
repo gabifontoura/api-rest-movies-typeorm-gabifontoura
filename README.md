@@ -1,3 +1,4 @@
-# m4-t14-movies-typeorm
+# api-rest-movies-typeorm
 
-Para essa entrega, é necessário executar testes automatizados.
+API desenvolvida para exercício de TypeORM, possui manipulação básica de dados CRUD de filmes, lógica de paginação <br>
+Desenvolvida com NodeJS, TypeScript, Express, integrada com banco de dados PostgreSQL, e testes automatizados.
